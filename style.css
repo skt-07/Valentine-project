@@ -123,13 +123,27 @@ body::before {
 }
 @media (max-width: 600px) {
   .heart {
-    width: 120px;
-    height: 120px;
-    font-size: 20px;
-    line-height: 120px;
-    clip-path: path("M60 20 C 80 0, 120 0, 120 40 C 120 80, 60 120, 60 120 C 60 120, 0 80, 0 40 C 0 0, 40 0, 60 20 Z");
+    width: 100px;
+    height: 90px;
+    font-size: 18px;
+    line-height: 90px;
+    background: green;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    clip-path: polygon(
+      50% 0%,
+      100% 30%,
+      80% 100%,
+      50% 80%,
+      20% 100%,
+      0% 30%
+    );
   }
 }
+
+
 
 
 
