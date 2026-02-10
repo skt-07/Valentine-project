@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Great Vibes', cursive;
   text-align: center;
   background: #ffe6f0;
   padding: 50px;
@@ -90,5 +90,24 @@ body {
     width: 180px;
   }
 }
+/* Floating hearts background */
+body::before {
+  content: "💖 💕 💓 💞";
+  position: fixed;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  font-size: 40px;
+  animation: float 10s linear infinite;
+  opacity: 0.3;
+  pointer-events: none; /* ensures hearts don't block clicks */
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+
+
 
 
