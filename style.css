@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #ffe6f0;
+  padding: 50px;
+  background-image: radial-gradient(white 10%, transparent 11%);
+  background-size: 30px 30px;
+}
+.question {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.animated-heart {
+  font-size: 40px;
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+.heart {
+  width: 220px;
+  height: 200px;
+  background: green;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  clip-path: path("M110 30 C 140 0, 220 0, 220 70 C 220 140, 110 200, 110 200 C 110 200, 0 140, 0 70 C 0 0, 80 0, 110 30 Z");
+}
+.square {
+  width: 200px;
+  min-height: 80px;
+  background: red;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#final {
+  display: none;
+  font-size: 32px;
+  margin-top: 40px;
+}
+#gif img {
+  width: 220px;
+  margin-top: 20px;
+}
