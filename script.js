@@ -60,5 +60,23 @@ function createHeart() {
 
 // create hearts continuously
 setInterval(createHeart, 800);
+document.addEventListener("DOMContentLoaded", () => {
+  const yesButton = document.querySelector(".heart");
+  const noButton = document.querySelector(".square");
+
+  yesButton.addEventListener("click", () => {
+    alert("Yay! You said Yes ❤️");
+    // Or redirect:
+    // window.location.href = "yes.html";
+  });
+
+  noButton.addEventListener("click", () => {
+    alert("Oh no! You said No 💔");
+    // Or redirect:
+    // window.location.href = "no.html";
+  });
+});
+
+
 
 
