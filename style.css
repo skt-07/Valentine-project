@@ -107,6 +107,30 @@ body::before {
   0% { transform: translateY(0); }
   100% { transform: translateY(100vh); }
 }
+.floating-heart {
+  position: fixed;
+  top: -50px;
+  font-size: 30px;
+  animation: fall linear forwards;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+@media (max-width: 600px) {
+  .heart {
+    width: 120px;
+    height: 120px;
+    font-size: 20px;
+    line-height: 120px;
+    clip-path: path("M60 20 C 80 0, 120 0, 120 40 C 120 80, 60 120, 60 120 C 60 120, 0 80, 0 40 C 0 0, 40 0, 60 20 Z");
+  }
+}
+
 
 
 
