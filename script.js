@@ -43,3 +43,22 @@ noBtn.addEventListener("click", () => {
     noBtn.textContent = "No";
   }
 });
+// Floating hearts animation
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("floating-heart");
+  heart.textContent = "💖";
+  heart.style.left = Math.random() * 100 + "vw"; // random horizontal position
+  heart.style.animationDuration = (5 + Math.random() * 5) + "s"; // random speed
+  document.body.appendChild(heart);
+
+  // remove heart after animation ends
+  setTimeout(() => {
+    heart.remove();
+  }, 10000);
+}
+
+// create hearts continuously
+setInterval(createHeart, 800);
+
+
