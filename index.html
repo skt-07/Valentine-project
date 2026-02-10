@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- fixes mobile scaling -->
   <title>Valentine Surprise</title>
   <style>
     body {
@@ -15,12 +16,12 @@
 
     h1 {
       margin-top: 20px;
-      font-size: clamp(20px, 6vw, 40px);
+      font-size: clamp(22px, 5vw, 36px);
       color: #d6336c;
     }
 
     .animated-heart {
-      font-size: clamp(30px, 10vw, 80px);
+      font-size: clamp(40px, 8vw, 70px);
       animation: pulse 1s infinite;
     }
 
@@ -36,10 +37,11 @@
       border: none;
       cursor: pointer;
       margin: 20px;
+      display: inline-block;
     }
     .yes-btn svg {
-      width: clamp(80px, 25vw, 150px);
-      height: auto;
+      width: 120px;
+      height: 120px;
     }
 
     /* Red box No button */
@@ -48,8 +50,8 @@
       color: white;
       border: none;
       cursor: pointer;
-      font-size: clamp(16px, 5vw, 28px);
-      padding: 10px 20px;
+      font-size: clamp(16px, 4vw, 24px);
+      padding: 12px 24px;
       margin: 20px;
       transition: all 0.3s ease;
     }
@@ -59,7 +61,7 @@
       position: absolute;
       top: -10%;
       color: white;
-      font-size: clamp(12px, 4vw, 24px);
+      font-size: 20px;
       animation: fall linear infinite;
     }
 
@@ -70,12 +72,12 @@
 
     #final {
       display: none;
-      margin-top: 10vh;
+      margin-top: 50px;
     }
 
     #final h2 {
       color: #d6336c;
-      font-size: clamp(20px, 6vw, 36px);
+      font-size: clamp(20px, 5vw, 32px);
     }
 
     #final img {
@@ -120,8 +122,8 @@
       if(step < noTexts.length) {
         document.querySelector('.no-btn').innerText = noTexts[step];
         if(step >= 10) {
-          document.querySelector('.yes-btn svg').style.width = (100 + step*5) + "px";
-          document.querySelector('.no-btn').style.fontSize = (20 - step) + "px";
+          document.querySelector('.yes-btn svg').style.width = (120 + step*5) + "px";
+          document.querySelector('.no-btn').style.fontSize = Math.max(12, 24 - step) + "px";
         }
       } else {
         document.querySelector('.no-btn').style.display = "none";
@@ -147,5 +149,4 @@
   </script>
 </body>
 </html>
-
 
