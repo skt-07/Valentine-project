@@ -66,3 +66,29 @@ body {
   width: 220px;
   margin-top: 20px;
 }
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .question {
+    font-size: 24px;
+  }
+
+  .heart {
+    width: 150px;
+    height: 140px;
+    font-size: 22px;
+    line-height: 140px;
+  }
+
+  .square {
+    width: 150px;
+    min-height: 60px;
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  #gif img {
+    width: 180px;
+  }
+}
+
+
