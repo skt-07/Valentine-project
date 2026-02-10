@@ -123,31 +123,44 @@ body::before {
 }
 @media (max-width: 600px) {
   .heart {
-    /* your heart styles here */
+    position: relative;
+    width: 100px;
+    height: 90px;
+    background: green;
+    transform: rotate(-45deg);
+    margin: 20px auto;
   }
 
   .heart span {
-    /* your text centering styles here */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(45deg) translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
   }
 
   .heart::before,
   .heart::after {
-    /* your heart circles here */
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    background: green;
+    border-radius: 50%;
   }
 
-  /* ✅ Add this part for the No button */
-  .square {
-    width: 100px;
-    min-height: 60px;
-    font-size: 18px;
-    padding: 8px;
-    background: red;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
-    margin: 0 auto;
+  .heart::before {
+    top: -50px;
+    left: 0;
   }
+
+  .heart::after {
+    left: 50px;
+    top: 0;
+  }
+}
 
   /* ✅ Add this part to stack buttons vertically */
   .options {
@@ -200,6 +213,7 @@ body::before {
     box-shadow: 0 0 40px rgba(0, 255, 0, 0.9);
   }
 }
+
 
 
 
