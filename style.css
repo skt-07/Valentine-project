@@ -177,6 +177,30 @@ body::before {
   background: darkred;
   transition: transform 0.3s, background 0.3s;
 }
+/* Soft glow around the heart */
+.heart {
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6); /* green glow */
+  transition: box-shadow 0.3s ease;
+}
+
+.heart:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 0, 0.9); /* brighter glow on hover/tap */
+}
+/* Pulsing glow for the heart */
+.heart {
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(0, 255, 0, 0.9);
+  }
+}
+
 
 
 
